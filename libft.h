@@ -6,7 +6,7 @@
 /*   By: ayoub <ayoub@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 10:55:02 by ayoub             #+#    #+#             */
-/*   Updated: 2024/10/07 14:00:07 by ayoub            ###   ########.fr       */
+/*   Updated: 2024/10/07 19:42:04 by ayoub            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 char    *ft_strnstr(const char *big, const char *little, size_t len);
 void    ft_putchar_fd(int c, int fd);
 void    ft_putstr_fd(char *s, int fd);
+int ft_atoi(const char *nptr);
 
 #endif
