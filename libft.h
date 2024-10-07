@@ -6,7 +6,7 @@
 /*   By: ayoub <ayoub@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 10:55:02 by ayoub             #+#    #+#             */
-/*   Updated: 2024/10/07 19:53:46 by ayoub            ###   ########.fr       */
+/*   Updated: 2024/10/07 20:17:11 by ayoub            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ void    ft_putchar_fd(int c, int fd);
 void    ft_putstr_fd(char *s, int fd);
 int ft_atoi(const char *nptr);
 void    *ft_calloc(size_t nmemb, size_t size);
+char    *ft_strdup(const char *s);
 
 #endif
