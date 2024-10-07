@@ -6,7 +6,7 @@
 /*   By: ayoub <ayoub@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:02:37 by ayoub             #+#    #+#             */
-/*   Updated: 2024/10/07 13:50:45 by ayoub            ###   ########.fr       */
+/*   Updated: 2024/10/07 13:52:21 by ayoub            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,4 @@ char    *ft_strnstr(const char *big, const char *little, size_t len)
             return((char *)&big[i]);
     }
     return (NULL);
-}
-#include <stdio.h>
-
-int main()
-{
-    const char  *str1 = "hello world";
-    const char  *str2 = "world";
-    char    *result;
-
-    result = ft_strnstr(str1, str2, 13);
-    if (result)
-    {
-        printf("Found substring: %s\n", result);
-    }
-    else 
-    {
-        printf("Substring not found.\n");
-    }
-    return 0;
 }
