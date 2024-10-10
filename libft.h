@@ -6,7 +6,7 @@
 /*   By: ayoub <ayoub@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 10:55:02 by ayoub             #+#    #+#             */
-/*   Updated: 2024/10/09 13:57:54 by ayoub            ###   ########.fr       */
+/*   Updated: 2024/10/10 20:38:17 by ayoub            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
