@@ -6,7 +6,7 @@
 /*   By: ayoub <ayoub@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 10:55:02 by ayoub             #+#    #+#             */
-/*   Updated: 2024/10/07 20:17:11 by ayoub            ###   ########.fr       */
+/*   Updated: 2024/10/09 13:57:54 by ayoub            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,10 @@ void    *ft_memset(void *s, int c, size_t n);
 void    ft_bzero(void *s, size_t n);
 void    *memcpy(void *dest, const void *src, size_t n);
 void    *ft_memmove(void *dest, const void *src, size_t len);
-size_t  ft_strlen(const char *s);
 size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t  ft_strlcat(char *dst, const char *src, size_t size);
 int ft_toupper(int c);
 int ft_tolower(int c);
-char    *ft_strchr(const char *s, int c);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -45,5 +43,6 @@ void    ft_putstr_fd(char *s, int fd);
 int ft_atoi(const char *nptr);
 void    *ft_calloc(size_t nmemb, size_t size);
 char    *ft_strdup(const char *s);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
