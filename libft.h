@@ -6,7 +6,7 @@
 /*   By: ayoub <ayoub@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 10:55:02 by ayoub             #+#    #+#             */
-/*   Updated: 2024/10/10 20:38:17 by ayoub            ###   ########.fr       */
+/*   Updated: 2024/10/16 18:34:11 by ayoub            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int ft_atoi(const char *nptr);
 void    *ft_calloc(size_t nmemb, size_t size);
 char    *ft_strdup(const char *s);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strtrim(char const *s1, char const *set);
 
 #endif

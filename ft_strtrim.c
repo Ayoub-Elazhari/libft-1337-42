@@ -6,60 +6,53 @@
 /*   By: ayoub <ayoub@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 20:19:07 by ayoub             #+#    #+#             */
-/*   Updated: 2024/10/10 20:43:19 by ayoub            ###   ########.fr       */
+/*   Updated: 2024/10/16 20:13:11 by ayoub            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char    *ft_strncpy(char *dest, const char *src, size_t n)
-{
-    size_t  i;
 
-    i = 0;
-    while (i < n && src[i] != '\0')
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    while (i < n)
-    {
-        dest[i] = '\0';
-        i++;
-    }
-    return dest;
-}
-
-int isset(char c, const char *s)
+int isset(const char c, const char *set)
 {
     int i;
 
     i = 0;
-    while (s[i])
+    while (set[i])
     {
-        if (c == s[i])
+        if (c == set[i])
             return (1);
         i++;
     }
     return (0);
 }
-char    *ft_strtrim(char const *s1, char const *set)
+
+char    *ft_strtrim(const char *s1, const char *set)
 {
-    char    *new;
-    int i;
+    size_t  start;
     size_t  end;
-    
-    i = 0;
+    char    *trimmed_str;
+
+    if (!s1 || !set)//  if string and set are empty
+        return (NULL);
+    start = 0;
     end = ft_strlen(s1);
-    if (!s1 || !set)
-        return (NULL);
-    while (s1[i] && isset[s1[i - 1], set])
-        i++;
-    while (end > 0 && isset(s1[end - 1], set))
+    while (s1[start] && isset(s1[start], set))//    checking if set is in string
+        start++;
+    while (end > start && isset(s1[end - 1], set))//    checking if set is in string while end > start
         end--;
-    new = (char *)malloc(sizeof(char) * (end + 1));
-    if (!new)
+    //  if start equal to end that's mean we reach the target
+    if (start == end)
+    {
+        trimmed_str = malloc(1);//  allocating place for the null charecter
+        if (!trimmed_str)
+            return (NULL);
+        trimmed_str[0] = '\0';
+        return (trimmed_str);
+    }
+    trimmed_str = malloc(end - start + 1);//    The plus 1 is for the null character that we did allocate a place for it
+    if (!trimmed_str)
         return (NULL);
-    ft_strncpy(new, s1, set);
-    new = '\0';
-    return new;
+    ft_memcpy(trimmed_str, &s1[start], end - start);
+    trimmed_str[end - start] = '\0';
+    return (trimmed_str);
 }
